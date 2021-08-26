@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16.3)
+cmake_minimum_required(VERSION 3.14.0)
 
 project(testing)
 
@@ -10,10 +10,8 @@ FetchContent_Declare(
   GIT_TAG        v2.13.1)
 
 FetchContent_MakeAvailable(Catch2)
-###
 
 file(GLOB TEST_SOURCES *.cpp)
-
 
 add_executable(testing ${TEST_SOURCES} ${catch2_SOURCE_DIR})
 target_link_libraries(testing PRIVATE Catch2::Catch2)
