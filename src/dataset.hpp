@@ -2,6 +2,7 @@
 #define _CAMERA_CALIBRATION_SRC_DATASET_HPP_
 
 #include <string>
+#include <vector>
 
 namespace CamCalib
 {
@@ -16,10 +17,11 @@ namespace CamCalib
     private:
         std::string path_dataset_;
         LR_IMAGE_READ read_type_;
+        // std::vector<std::pair<string>>
 
     public:
         Dataset();
-        Dataset(std::string &path_dataset, CamCalib::LR_IMAGE_READ &read_type);
+        Dataset(const std::string &path_dataset, const CamCalib::LR_IMAGE_READ &read_type);
     };
 
 };
